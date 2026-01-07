@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LottieAnimation from "./components/LottieAnimation";
 import weddingAnimation from "../assets/Wedding.json";
+import floralAnimation from "../assets/FloralAnimatedDesign.json";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
         </p>
 
         <div className="mb-8">
-          <div className="text-2xl font-semibold text-[#37474F] uppercase tracking-widest mb-2">Sunday | 26 January 2025</div>
+          <div className="text-2xl font-semibold text-[#37474F] uppercase tracking-widest mb-2">Sunday | 26 January 2026</div>
           <div className="text-[1.2rem] text-[#546E7A] mb-2">Reception 4 to 7 pm</div>
           <div className="text-lg text-[#78909C]">HM Hall kidangazhi</div>
         </div>
@@ -44,8 +45,21 @@ export default function Home() {
 
       {/* Visual Side (Right on Desktop, Bottom on Mobile) */}
       <div className="flex-1 relative flex justify-center items-end overflow-hidden z-[50] max-md:flex-[0.8] max-md:w-full max-md:order-2 max-md:min-h-[40vh] order-2 md:order-none pb-8 md:pb-0">
-         <LottieAnimation animationData={weddingAnimation} />
+         <LottieAnimation 
+           animationData={weddingAnimation} 
+           className="w-[130%] md:w-[85%] h-auto max-h-[60vh] md:max-h-[90vh] object-contain mt-[-30%] md:mt-0 mb-[-10%] md:mb-0 relative z-30"
+         />
          {/* Floral Decoration - Top Right */}
+      </div>
+
+      {/* Floral Decoration - Bottom Left */}
+      <div className="absolute w-[150px] md:w-[250px] pointer-events-none z-20 opacity-60 mix-blend-multiply bottom-0 left-0">
+        <LottieAnimation animationData={floralAnimation} className="w-full h-auto" />
+      </div>
+
+      {/* Floral Decoration - Top Right */}
+      <div className="absolute w-[150px] md:w-[250px] pointer-events-none z-20 opacity-90 mix-blend-multiply top-0 right-0 rotate-180">
+        <LottieAnimation animationData={floralAnimation} className="w-full h-auto" />
       </div>
     </main>
   );
