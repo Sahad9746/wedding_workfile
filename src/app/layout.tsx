@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
-import { Great_Vibes, Montserrat } from "next/font/google"; // Using Google Fonts via Next.js
+import { Pinyon_Script, Playfair_Display } from "next/font/google"; // Using Google Fonts via Next.js
 import "./globals.css";
 
-const greatVibes = Great_Vibes({
+const pinyonScript = Pinyon_Script({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${greatVibes.variable} ${montserrat.variable} h-full m-0 p-0 overflow-x-hidden overflow-y-auto md:overflow-y-hidden flex justify-center items-center`}>
+      <body className={`${pinyonScript.variable} ${playfairDisplay.variable} h-full m-0 p-0 overflow-x-hidden overflow-y-auto md:overflow-y-hidden flex justify-center items-center`}>
         <div id="app" className="w-full h-full relative">
             {children}
         </div>

@@ -15,8 +15,8 @@ const config: Config = {
         accent: "#CFD8DC",
       },
       fontFamily: {
-        heading: ['Great Vibes', 'cursive'],
-        body: ['Montserrat', 'sans-serif'],
+        heading: ['var(--font-heading)', 'cursive'],
+        body: ['var(--font-body)', 'serif'],
       },
     },
   },
