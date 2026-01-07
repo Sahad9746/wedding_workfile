@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${greatVibes.variable} ${montserrat.variable} h-full m-0 p-0 overflow-x-hidden flex justify-center items-center`}>
+      <body className={`${greatVibes.variable} ${montserrat.variable} h-full m-0 p-0 overflow-x-hidden overflow-y-auto md:overflow-y-hidden flex justify-center items-center`}>
         <div id="app" className="w-full h-full relative">
             {children}
         </div>

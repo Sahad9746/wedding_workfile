@@ -4,30 +4,18 @@ import weddingAnimation from "../assets/Wedding.json";
 
 export default function Home() {
   return (
-    <main className="flex flex-col md:flex-row w-full h-full relative overflow-hidden">
+    <main className="flex flex-col md:flex-row w-full min-h-screen md:h-full relative overflow-y-auto md:overflow-hidden">
       {/* Background Video */}
       {/* Background Video - Desktop */}
+      {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[1] hidden md:block"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
       >
         <source src="/Animation_Motion_Graphic.mp4" type="video/mp4" />
-      </video>
-
-      {/* Background Video - Mobile */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[1] block md:hidden"
-      >
-        <source src="/mobile_background.mov" type="video/quicktime" />
-        {/* Fallback source just in case */}
-        <source src="/mobile_background.mov" type="video/mp4" />
       </video>
       {/* Content Side (Left on Desktop, Top on Mobile - Arch) */}
       <div className="flex-1 flex flex-col justify-center items-center p-8 md:p-16 z-10 relative text-center md:rounded-tr-[50vw] md:rounded-br-none max-md:rounded-bl-[30vw] max-md:rounded-br-[30vw] order-1 md:order-none">
