@@ -6,16 +6,29 @@ export default function Home() {
   return (
     <main className="flex flex-col md:flex-row w-full h-full relative overflow-hidden">
       {/* Background Video */}
+      {/* Background Video - Desktop */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[1] hidden md:block"
       >
         <source src="/Animation_Motion_Graphic.mp4" type="video/mp4" />
       </video>
-      {/* Content Side (Left on Desktop, Top on Mobile - Arch) */}
+
+      {/* Background Video - Mobile */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[1] block md:hidden"
+      >
+        <source src="/mobile_background.mov" type="video/quicktime" />
+        {/* Fallback source just in case */}
+        <source src="/mobile_background.mov" type="video/mp4" />
+      </video>
       {/* Content Side (Left on Desktop, Top on Mobile - Arch) */}
       <div className="flex-1 flex flex-col justify-center items-center p-8 md:p-16 z-10 relative text-center md:rounded-tr-[50vw] md:rounded-br-none max-md:rounded-bl-[30vw] max-md:rounded-br-[30vw] order-1 md:order-none">
         <h2 className="font-body text-xl tracking-[0.2rem] uppercase text-[#90A4AE] mb-4 -mr-[0.2rem]">Save the Date</h2>
@@ -38,31 +51,13 @@ export default function Home() {
         </div>
 
         {/* Floral Decoration - Bottom Left (of Arch) */}
-         <div className="absolute w-[150px] md:w-[250px] pointer-events-none z-20 opacity-60 mix-blend-multiply bottom-0 left-0">
-             {/* Using bottom-left png mirrored or just bottom-left as is */}
-            <Image
-              src="/bottom-left.png"
-              alt="Floral Decoration"
-              width={200}
-              height={200}
-              style={{width: '100%', height: 'auto'}}
-            />
-         </div>
+
       </div>
 
       {/* Visual Side (Right on Desktop, Bottom on Mobile) */}
-      <div className="flex-1 relative flex justify-center items-end overflow-hidden z-10 max-md:flex-[0.8] max-md:w-full max-md:order-2 max-md:min-h-[40vh] order-2 md:order-none">
+      <div className="flex-1 relative flex justify-center items-end overflow-hidden z-[50] max-md:flex-[0.8] max-md:w-full max-md:order-2 max-md:min-h-[40vh] order-2 md:order-none pb-8 md:pb-0">
          <LottieAnimation animationData={weddingAnimation} />
          {/* Floral Decoration - Top Right */}
-         <div className="absolute w-[150px] md:w-[250px] pointer-events-none z-20 opacity-90 mix-blend-multiply top-0 right-0">
-            <Image
-              src="/top-right.png"
-              alt="Floral Decoration"
-              width={300}
-              height={300}
-              style={{width: '100%', height: 'auto'}}
-            />
-         </div>
       </div>
     </main>
   );
