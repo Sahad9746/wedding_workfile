@@ -18,7 +18,7 @@ export default function Home() {
         <source src="/Animation_Motion_Graphic.mp4" type="video/mp4" />
       </video>
       {/* Content Side (Left on Desktop, Top on Mobile - Arch) */}
-      <div className="flex-1 flex flex-col justify-center items-center p-8 md:p-16 z-10 relative text-center md:rounded-tr-[50vw] md:rounded-br-none max-md:rounded-bl-[30vw] max-md:rounded-br-[30vw] order-1 md:order-none">
+      <div className="flex-1 flex flex-col justify-center items-center p-8 md:p-16 z-[10] relative text-center md:rounded-tr-[50vw] md:rounded-br-none max-md:rounded-bl-[30vw] max-md:rounded-br-[30vw] order-1 md:order-none">
         <h2 className="font-body text-xl tracking-[0.2rem] uppercase text-[#90A4AE] mb-4 -mr-[0.2rem]">Save the Date</h2>
         
         <h1 className="font-heading text-[3.5rem] md:text-[5rem] text-[#78909C] leading-[1.1] mb-6">
