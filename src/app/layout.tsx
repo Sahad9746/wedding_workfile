@@ -17,6 +17,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Nahas & Nihala | Save the Date",
   description: "We joyfully invite you to join us on Sunday, 26 January 2025 at HM Hall kidangazhi. Reception 4 to 7 pm.",
   openGraph: {
